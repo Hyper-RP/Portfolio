@@ -1,17 +1,18 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { motion } from 'framer-motion';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
-import html from '../assets/HTML.png';
-import css from '../assets/CSS.png';
-import js from '../assets/Javascript.svg';
-import react from '../assets/React.png';
-import git from '../assets/Git.svg';
-import github from '../assets/Github.svg';
-import tailwind from '../assets/Tailwind.png';
-import java from '../assets/java.png';
-import mySql from '../assets/mySql.png';
+import html from "../assets/HTML.png";
+import css from "../assets/CSS.png";
+import js from "../assets/Javascript.svg";
+import react from "../assets/React.png";
+import git from "../assets/Git.svg";
+import github from "../assets/Github.svg";
+import tailwind from "../assets/Tailwind.png";
+import java from "../assets/java.png";
+import mySql from "../assets/mySql.png";
+import springBoot from "../assets/springBoot.png";
 
 export default function SkillsSection() {
   useEffect(() => {
@@ -19,21 +20,24 @@ export default function SkillsSection() {
   }, []);
 
   const skills = [
-    { img: html, name: 'HTML' },
-    { img: css, name: 'CSS' },
-    { img: js, name: 'JavaScript' },
-    { img: tailwind, name: 'Tailwind' },
-    { img: react, name: 'React' },
-    { img: git, name: 'Git' },
-    { img: github, name: 'Github' },
-    { img: java, name: 'Java' },
-    { img: mySql, name: 'MySQL' },
+    { img: html, name: "HTML" },
+    { img: css, name: "CSS" },
+    { img: js, name: "JavaScript" },
+    { img: tailwind, name: "Tailwind" },
+    { img: react, name: "React" },
+    { img: java, name: "Java" },
+    { img: springBoot, name: "Spring Boot" },
+    { img: mySql, name: "MySQL" },
+    { img: git, name: "Git" },
+    { img: github, name: "Github" },
   ];
 
   return (
     <section id="skills" className="py-16  px-4 bg-gradient-to-b  text-white">
-      <div >
-        <h2 className="text-4xl font-extrabold text-center mb-12 underline text-black">My Tech Stack</h2>
+      <div>
+        <h2 className="text-4xl font-extrabold text-center mb-12 underline text-black">
+          My Tech Stack
+        </h2>
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-6xl mx-auto"
           initial="hidden"
