@@ -51,9 +51,9 @@ function Hero() {
               </a>
             </div>
 
-            <div className="hs-left button inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer">
+            {/* <div className="hs-left button inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer">
               Hire me
-            </div>
+            </div> */}
 
             
           </div>
