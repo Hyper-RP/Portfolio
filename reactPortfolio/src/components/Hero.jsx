@@ -46,7 +46,7 @@ function Hero() {
 
           <div>
             <div className="hs-left button inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 cursor-pointer">
-              <a href="/RohitPatil_resume.pdf" download="Rohit_Patil_resume.pdf">
+              <a href="/RohitPatil_resumes.pdf" download="RohitPatil_resume.pdf">
                 <button>Resume</button>
               </a>
             </div>
