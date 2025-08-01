@@ -18,7 +18,7 @@ function Contact() {
 
   function submitHandler(e) {
     e.preventDefault();
-    axios.post("http://localhost:8080/submitForm",{email:formData.email,message:formData.message,name:formData.name})
+    axios.post("https://rohitpfolio.netlify.app/submitForm",{email:formData.email,message:formData.message,name:formData.name})
         .then(()=>{toast.success("form submitted...")})
         .catch(()=>{toast.error("something went wrong !!!")})
     setFormData(()=>({
