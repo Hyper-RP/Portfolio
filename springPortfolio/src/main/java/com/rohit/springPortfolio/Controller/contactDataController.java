@@ -16,7 +16,7 @@ public class contactDataController {
     @Autowired
     private contactDataService contactDataServiceObj;
 
-    @GetMapping("allMessages")
+    @GetMapping("/allMessages")
     public List<contactData> allMessages(){
         return contactDataServiceObj.allMessages();
     }
