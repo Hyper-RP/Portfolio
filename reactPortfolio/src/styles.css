@@ -271,10 +271,10 @@ a{
 
 
 .button{
-    width: 11rem;
-    margin-left: 3rem;
+    width: 10.5rem;
+    /* margin-left: 3rem; */
     position: relative;
-    padding: 0.8rem 2.4rem;
+    padding: 0.8rem 2rem;
     background-color: #e84949;
     color: #f7dbdb;
     font-size: 1.2rem;

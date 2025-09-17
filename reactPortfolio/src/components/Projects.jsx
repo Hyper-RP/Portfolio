@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import proj1 from "../assets/Project1.png";
 import proj2 from "../assets/Project2.png";
@@ -22,10 +23,39 @@ const stagger = {
 
 function Projects() {
   const projects = [
-    {img:proj1,Name:"Razorpay Clone"},
-     {img:proj2,Name:"Discord Clone"}, 
-     {img:proj3,Name:"Password Generator"}, 
-     {img:proj4,Name:"Weather App"}];
+    {
+      img: proj1,
+      Name: "Razorpay Clone",
+      description: "A functional clone of the Razorpay website's homepage, built to demonstrate frontend skills in HTML and Tailwind CSS.",
+      technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+      liveLink: "https://your-live-link.com/razorpay-clone",
+      sourceCode: "https://github.com/Hyper-RP"
+    },
+    {
+      img: proj2,
+      Name: "Discord Clone",
+      description: "A real-time chat application mimicking Discord's core features, including servers, channels, and messaging.",
+      technologies: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
+      liveLink: "https://your-live-link.com/discord-clone",
+      sourceCode: "https://github.com/Hyper-RP"
+    },
+    {
+      img: proj3,
+      Name: "Password Generator",
+      description: "A tool to generate strong, random passwords with customizable options for length and character types.",
+      technologies: ["React", "JavaScript", "CSS"],
+      liveLink: "https://your-live-link.com/password-generator",
+      sourceCode: "https://github.com/Hyper-RP"
+    },
+    {
+      img: proj4,
+      Name: "Weather App",
+      description: "A weather application that provides real-time weather data for any location, using a third-party weather API.",
+      technologies: ["React", "API Integration", "CSS"],
+      liveLink: "https://your-live-link.com/weather-app",
+      sourceCode: "https://github.com/Hyper-RP"
+    }
+  ];
 
   return (
     <motion.section
@@ -45,21 +75,22 @@ function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-10">
         {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            className="shadow-xl rounded-xl overflow-hidden bg-white p-4 hover:shadow-2xl transition duration-300"
-            variants={fadeUp}
-            whileHover={{ scale: 1.03 }}
-          >
-            <img
-              src={project.img}
-              alt={`Project ${idx + 1}`}
-              className="w-full h-64 object-cover rounded-md mb-4"
-            />
-            <h3 className="text-xl font-semibold text-center text-gray-700">
-               {project.Name}
-            </h3>
-          </motion.div>
+          <Link to={`/project/${idx}`} state={{ project }} key={idx}>
+            <motion.div
+              className="shadow-xl rounded-xl overflow-hidden bg-white p-4 hover:shadow-2xl transition duration-300"
+              variants={fadeUp}
+              whileHover={{ scale: 1.03 }}
+            >
+              <img
+                src={project.img}
+                alt={`Project ${idx + 1}`}
+                className="w-full h-64 object-cover rounded-md mb-4"
+              />
+              <h3 className="text-xl font-semibold text-center text-gray-700">
+                 {project.Name}
+              </h3>
+            </motion.div>
+          </Link>
         ))}
       </div>
     </motion.section>
