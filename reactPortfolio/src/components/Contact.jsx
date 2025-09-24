@@ -1,61 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect} from "react";
 import "../styles.css";
-import { toast } from "react-toastify";
-import axios from "axios";
-import { db } from "../config/firestore";
+// import axios from "axios";
 // import { getDatabase, ref, set } from "firebase/database";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-
-const getData = async () => {
-  const data = await getDocs(collection(db, "portfolio"));
-  data.forEach((doc) => {
-    console.log(doc.data());
-  });
-};
+// import { collection, addDoc, getDocs } from "firebase/firestore";
+// import { form } from "framer-motion/client";
+import { portfolioContext } from "../Context/Portfolio";
+import { toast } from "react-toastify";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const {
+    formData,
+    setFormData,
+    writeUserData,
+    guess,
+    gender,
+    nameIdentifier,
+    nameMap,
+    downloadPermission,
+    requiredHandler
+  } = useContext(portfolioContext);
 
   useEffect(() => {
-    getData();
-  }, []);
-
-  async function writeUserData(e) {
-    e.preventDefault();
-    try {
-      const docRef = await addDoc(collection(db, "portfolio"), {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      });
-      setFormData(() => ({
-        name: "",
-        email: "",
-        message: "",
-      }));
-      toast.success("form submitted...");
-      console.log("Document written with ID : " + docRef.id);
-    } catch (e) {
-      toast.error("something went wrong !!!");
-      console.error("error to connect firestore : " + e);
-    }
-  }
-
+    if (!formData.name) return;
+    const timer = setTimeout(() => {
+      guess();
+      nameIdentifier();
+      // console.log("name : "+formData.name);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [formData.name]);
+  
   return (
     <>
       {/* data-aos="fade-up" */}
       <section id="contact" className="py-12 text-center">
-        <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+        <h2 className="text-3xl font-serif text-[#0000007e] font-bold mb-6">Don't Be a Stranger.</h2>
         <form
           className="max-w-xl mx-auto space-y-4"
           onSubmit={(e) => writeUserData(e)}
         >
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             value={formData.name}
             onChange={(e) => {
@@ -66,10 +52,13 @@ function Contact() {
             }}
             className="w-full p-2 border border-gray-300 rounded"
           />
+
           <input
             type="email"
             placeholder="Your Email"
             value={formData.email}
+            name="email"
+            
             onChange={(e) => {
               setFormData((prev) => ({
                 ...prev,
@@ -82,7 +71,9 @@ function Contact() {
             placeholder="Your Message"
             rows="5"
             value={formData.message}
+            name="message"
             onChange={(e) => {
+
               setFormData((prev) => ({
                 ...prev,
                 message: e.target.value,

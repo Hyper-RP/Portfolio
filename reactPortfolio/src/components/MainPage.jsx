@@ -5,6 +5,8 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Experience from "./Experience";
+import Footer from "./Footer";
+import Trainings from "./Trainings";
 
 const MainPage = () => {
   return (
@@ -14,8 +16,10 @@ const MainPage = () => {
         <Hero />
         <Skills />
         <Experience />
+        <Trainings/>
         <Projects />
         <Contact />
+        <Footer/>
       </div>
     </div>
   );

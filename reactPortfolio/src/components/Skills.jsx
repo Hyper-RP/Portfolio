@@ -13,6 +13,7 @@ import tailwind from "../assets/Tailwind.png";
 import java from "../assets/java.png";
 import mySql from "../assets/mySql.png";
 import springBoot from "../assets/springBoot.png";
+import firebaseLogo from "../assets/firebaseLogo.png"
 
 export default function SkillsSection() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function SkillsSection() {
     { img: java, name: "Java" },
     { img: springBoot, name: "Spring Boot" },
     { img: mySql, name: "MySQL" },
+    { img: firebaseLogo, name: "Firebase" },
     { img: git, name: "Git" },
     { img: github, name: "Github" },
   ];
