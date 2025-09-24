@@ -11,8 +11,8 @@ function Hero() {
   const { formData } = useContext(portfolioContext);
 
   const dialougeArr = [
-    "Thank you Beautiful",
-    "Thank you Gentleman",
+    "Thank you",
+    "Thank you",
     "Thank you",
   ];
 
