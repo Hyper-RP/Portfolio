@@ -50,14 +50,14 @@ function Experience() {
           </motion.h3>
 
           {/* The flickering light indicator */}
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </span>
+{/*           <span className="relative flex h-3 w-3"> */}
+{/*             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span> */}
+{/*             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span> */}
+{/*           </span> */}
         </div>
 
         <motion.p className="text-gray-500 text-sm mb-4" variants={fadeUp}>
-          COEP Technological University · Feb 2025 – Present · Pune, Maharashtra
+          COEP Technological University · May 2025 – December 2025 · Pune, Maharashtra
         </motion.p>
         <motion.ul
           className="list-disc list-inside text-gray-700 space-y-2"
