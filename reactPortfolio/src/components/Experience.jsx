@@ -82,6 +82,42 @@ function Experience() {
             alignment.
           </motion.li>
         </motion.ul>
+        {downloadPermission ? (
+                  <button className="px-4 py-2 rounded-full transition-all duration-300 cursor-pointer">
+                    <a
+                      href="VirtualLabCertificate.pdf"
+                      download="VirtualLabCertificate.pdf"
+                      className="
+                      inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white
+                      font-semibold rounded-full shadow-md
+                      transition-all duration-300 ease-in-out
+                      hover:bg-green-700 hover:shadow-lg hover:-translate-y-1
+                      focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
+                      cursor-pointer"
+                    >
+                      <FiDownload className="h-5 w-5" />
+                      <span>Certificate</span>
+                    </a>
+                  </button>
+                ) : (
+                  <button className=" md:flex md:justify-center md:items-center  px-2 py-2 rounded-full  transition-all duration-300 cursor-pointer">
+                    <a
+                      href="#contact"
+                      onClick={()=>redirectToContact()}
+                      className="
+                      inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white
+                      font-semibold rounded-full shadow-md
+                      transition-all duration-300 ease-in-out
+                      hover:bg-green-700 hover:shadow-lg hover:-translate-y-1
+                      focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
+                      cursor-pointer"
+                    >
+                      <FiDownload className="h-5 w-5" />
+                      <span>Certificate</span>
+                    </a>
+                  </button>
+                )}
+
       </motion.div>
 
       {/* NetLeap Internship */}
