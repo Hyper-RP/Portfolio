@@ -14,6 +14,8 @@ import java from "../assets/java.png";
 import mySql from "../assets/mySql.png";
 import springBoot from "../assets/springBoot.png";
 import firebaseLogo from "../assets/firebaseLogo.png"
+import angular from "../assets/angular.png"
+import nextJs from "../assets/nextjs.png"
 
 export default function SkillsSection() {
   useEffect(() => {
@@ -25,7 +27,9 @@ export default function SkillsSection() {
     { img: css, name: "CSS" },
     { img: js, name: "JavaScript" },
     { img: tailwind, name: "Tailwind" },
-    { img: react, name: "React" },
+    { img: react, name: "React Js" },
+    { img: nextJs, name: "Next Js" },
+    { img: angular, name: "Angular" },
     { img: java, name: "Java" },
     { img: springBoot, name: "Spring Boot" },
     { img: mySql, name: "MySQL" },

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { portfolioContext } from "../Context/Portfolio";
 import { FiDownload } from "react-icons/fi";
 function Experience() {
-  const { downloadPermission,redirectToContact } = useContext(portfolioContext);
+  const { downloadPermission, redirectToContact } =
+    useContext(portfolioContext);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
@@ -38,6 +39,84 @@ function Experience() {
         Experience
       </motion.h2>
 
+      {/* Applied Cloud Computing Internship */}
+      <motion.div
+        className="bg-white shadow-xl rounded-xl my-[1rem] px-8 py-8 max-w-4xl mx-auto border-l-4 border-[#cedc0a]"
+        variants={fadeUp}
+      >
+        <div className="flex items-center gap-3">
+          <motion.h3 className="text-2xl font-semibold" variants={fadeUp}>
+            Software Developer Intern
+          </motion.h3>
+          {/* The flickering light indicator */}
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+        </div>
+
+        <motion.p className="text-gray-500 text-sm mb-4" variants={fadeUp}>
+          Applied Cloud Computing · February 2026 – Present · Thane, Maharashtra
+        </motion.p>
+
+        <motion.ul
+          className="list-disc list-inside text-gray-700 space-y-2"
+          variants={stagger}
+        >
+          <motion.li variants={fadeUp}>
+            Working as an Angular Developer contributing to the Tata Mutual Fund
+            Application, building and improving frontend features.
+          </motion.li>
+
+          <motion.li variants={fadeUp}>
+            Collaboration with backend developers to integrate APIs, debug
+            issues, and optimize performance for a scalable and efficient
+            frontend architecture.
+          </motion.li>
+
+          <motion.li variants={fadeUp}>
+            Participation in debugging, optimizing performance, and maintaining
+            scalable frontend architecture.
+          </motion.li>
+        </motion.ul>
+{/* 
+        {downloadPermission ? (
+          <button className="px-4 py-2 rounded-full transition-all duration-300 cursor-pointer">
+            <a
+              href="VirtualLabCertificate.pdf"
+              download="VirtualLabCertificate.pdf"
+              className="
+        inline-flex items-center gap-2 px-4 py-2 bg-[#cedc0a] text-white
+        font-semibold rounded-full shadow-md
+        transition-all duration-300 ease-in-out
+        hover:bg-[#cbd904] hover:shadow-lg hover:-translate-y-1
+        focus:outline-none focus:ring-2 focus:ring-[#cedc0a] focus:ring-opacity-50
+        cursor-pointer"
+            >
+              <FiDownload className="h-5 w-5" />
+              <span>Certificate</span>
+            </a>
+          </button>
+        ) : (
+          <button className=" md:flex md:justify-center md:items-center  px-2 py-2 rounded-full  transition-all duration-300 cursor-pointer">
+            <a
+              href="#contact"
+              onClick={() => redirectToContact()}
+              className="
+        inline-flex items-center gap-2 px-4 py-2 bg-[#cedc0a] text-white
+        font-semibold rounded-full shadow-md
+        transition-all duration-300 ease-in-out
+        hover:bg-[#cbd904] hover:shadow-lg hover:-translate-y-1
+        focus:outline-none focus:ring-2 focus:ring-[#cedc0a] focus:ring-opacity-50
+        cursor-pointer"
+            >
+              <FiDownload className="h-5 w-5" />
+              <span>Certificate</span>
+            </a>
+          </button>
+        )} */}
+      </motion.div>
+
       {/* COEP Internship */}
       <motion.div
         className="bg-white shadow-xl rounded-xl my-[1rem] px-8 py-8 max-w-4xl mx-auto border-l-4 border-green-500"
@@ -50,14 +129,15 @@ function Experience() {
           </motion.h3>
 
           {/* The flickering light indicator */}
-{/*           <span className="relative flex h-3 w-3"> */}
-{/*             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span> */}
-{/*             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span> */}
-{/*           </span> */}
+          {/*           <span className="relative flex h-3 w-3"> */}
+          {/*             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span> */}
+          {/*             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span> */}
+          {/*           </span> */}
         </div>
 
         <motion.p className="text-gray-500 text-sm mb-4" variants={fadeUp}>
-          COEP Technological University · May 2025 – December 2025 · Pune, Maharashtra
+          COEP Technological University · May 2025 – December 2025 · Pune,
+          Maharashtra
         </motion.p>
         <motion.ul
           className="list-disc list-inside text-gray-700 space-y-2"
@@ -69,12 +149,16 @@ function Experience() {
           </motion.li>
           <motion.li variants={fadeUp}>
             Focused on designing an interactive Math Quizzes for{" "}
-            <a href="https://portal.coepvlab.ac.in/VirtualMathsLab/" target="_blank">
+            <a
+              href="https://portal.coepvlab.ac.in/VirtualMathsLab/"
+              target="_blank"
+            >
               <b>
                 <u>Virtual Math Lab</u>
               </b>
             </a>{" "}
-            project and helping students to improve learning and self-evaluation.
+            project and helping students to improve learning and
+            self-evaluation.
           </motion.li>
           <motion.li variants={fadeUp}>
             Collaborating with domain experts and academic mentors at COEP
@@ -83,44 +167,43 @@ function Experience() {
           </motion.li>
         </motion.ul>
         {downloadPermission ? (
-                  <button className="px-4 py-2 rounded-full transition-all duration-300 cursor-pointer">
-                    <a
-                      href="VirtualLabCertificate.pdf"
-                      download="VirtualLabCertificate.pdf"
-                      className="
+          <button className="px-4 py-2 rounded-full transition-all duration-300 cursor-pointer">
+            <a
+              href="VirtualLabCertificate.pdf"
+              download="VirtualLabCertificate.pdf"
+              className="
                       inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white
                       font-semibold rounded-full shadow-md
                       transition-all duration-300 ease-in-out
                       hover:bg-green-700 hover:shadow-lg hover:-translate-y-1
                       focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
                       cursor-pointer"
-                    >
-                      <FiDownload className="h-5 w-5" />
-                      <span>Certificate</span>
-                    </a>
-                  </button>
-                ) : (
-                  <button className=" md:flex md:justify-center md:items-center  px-2 py-2 rounded-full  transition-all duration-300 cursor-pointer">
-                    <a
-                      href="#contact"
-                      onClick={()=>redirectToContact()}
-                      className="
+            >
+              <FiDownload className="h-5 w-5" />
+              <span>Certificate</span>
+            </a>
+          </button>
+        ) : (
+          <button className=" md:flex md:justify-center md:items-center  px-2 py-2 rounded-full  transition-all duration-300 cursor-pointer">
+            <a
+              href="#contact"
+              onClick={() => redirectToContact()}
+              className="
                       inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white
                       font-semibold rounded-full shadow-md
                       transition-all duration-300 ease-in-out
                       hover:bg-green-700 hover:shadow-lg hover:-translate-y-1
                       focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50
                       cursor-pointer"
-                    >
-                      <FiDownload className="h-5 w-5" />
-                      <span>Certificate</span>
-                    </a>
-                  </button>
-                )}
-
+            >
+              <FiDownload className="h-5 w-5" />
+              <span>Certificate</span>
+            </a>
+          </button>
+        )}
       </motion.div>
 
-      {/* NetLeap Internship */}
+      {/* NetLeap Internship
       <motion.div
         className="bg-white shadow-xl rounded-xl my-[1rem] px-8 py-4 max-w-4xl mx-auto border-l-4 border-blue-500 mb-10"
         variants={fadeUp}
@@ -169,8 +252,8 @@ function Experience() {
         ) : (
           <button className=" md:flex md:justify-center md:items-center  px-2 py-2 rounded-full  transition-all duration-300 cursor-pointer">
             <a
-              href="#contact" 
-              onClick={()=>redirectToContact()}
+              href="#contact"
+              onClick={() => redirectToContact()}
               className=" 
               inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white 
               font-semibold rounded-full shadow-md
@@ -184,7 +267,7 @@ function Experience() {
             </a>
           </button>
         )}
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 }
